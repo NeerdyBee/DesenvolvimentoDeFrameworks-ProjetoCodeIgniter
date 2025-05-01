@@ -1,0 +1,120 @@
+DEBUG - 2025-04-10 00:56:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-10 00:56:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-10 00:56:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-10 00:56:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-10 00:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-10 00:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-10 00:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-10 00:57:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-10 01:14:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-10 01:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-10 01:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-10 01:16:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-10 01:16:10 --> TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given
+[Method: GET, Route: enderecos/index]
+in APPPATH\Views\enderecos\index.php on line 44.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('enderecos/index', [], true)
+ 4 APPPATH\Controllers\Enderecos.php(18): view('enderecos/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Enderecos->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Enderecos))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\webserver\\www\\codeigniter4\\public\\index.php')
+CRITICAL - 2025-04-10 01:16:10 --> [Caused by] ErrorException: Undefined variable $usuarios
+in APPPATH\Views\enderecos\index.php on line 44.
+ 1 APPPATH\Views\enderecos\index.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\xampp\\htdocs\\webserver\\www\\codeigniter4\\app\\Views\\enderecos\\index.php', 44)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\webserver\\www\\codeigniter4\\app\\Views\\enderecos\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('enderecos/index', [], true)
+ 5 APPPATH\Controllers\Enderecos.php(18): view('enderecos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Enderecos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Enderecos))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\webserver\\www\\codeigniter4\\public\\index.php')
+DEBUG - 2025-04-10 01:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-10 01:16:37 --> ErrorException: Undefined property: stdClass::$enderecos_id
+[Method: GET, Route: enderecos/index]
+in APPPATH\Views\enderecos\index.php on line 46.
+ 1 APPPATH\Views\enderecos\index.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$enderecos_id', 'C:\\xampp\\htdocs\\webserver\\www\\codeigniter4\\app\\Views\\enderecos\\index.php', 46)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\webserver\\www\\codeigniter4\\app\\Views\\enderecos\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('enderecos/index', [], true)
+ 5 APPPATH\Controllers\Enderecos.php(18): view('enderecos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Enderecos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Enderecos))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\webserver\\www\\codeigniter4\\public\\index.php')
+DEBUG - 2025-04-10 01:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-10 01:16:50 --> ErrorException: Undefined property: stdClass::$enderecos_id
+[Method: GET, Route: enderecos]
+in APPPATH\Views\enderecos\index.php on line 46.
+ 1 APPPATH\Views\enderecos\index.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$enderecos_id', 'C:\\xampp\\htdocs\\webserver\\www\\codeigniter4\\app\\Views\\enderecos\\index.php', 46)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\webserver\\www\\codeigniter4\\app\\Views\\enderecos\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('enderecos/index', [], true)
+ 5 APPPATH\Controllers\Enderecos.php(18): view('enderecos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Enderecos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Enderecos))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\webserver\\www\\codeigniter4\\public\\index.php')
+DEBUG - 2025-04-10 01:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-10 01:17:36 --> ErrorException: Undefined property: stdClass::$enderecos_id
+[Method: GET, Route: enderecos]
+in APPPATH\Views\enderecos\index.php on line 46.
+ 1 APPPATH\Views\enderecos\index.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$enderecos_id', 'C:\\xampp\\htdocs\\webserver\\www\\codeigniter4\\app\\Views\\enderecos\\index.php', 46)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\webserver\\www\\codeigniter4\\app\\Views\\enderecos\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('enderecos/index', [], true)
+ 5 APPPATH\Controllers\Enderecos.php(18): view('enderecos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Enderecos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Enderecos))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\webserver\\www\\codeigniter4\\public\\index.php')
+DEBUG - 2025-04-10 01:17:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-10 01:17:50 --> ErrorException: Undefined property: stdClass::$enderecos_id
+[Method: GET, Route: enderecos]
+in APPPATH\Views\enderecos\index.php on line 46.
+ 1 APPPATH\Views\enderecos\index.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$enderecos_id', 'C:\\xampp\\htdocs\\webserver\\www\\codeigniter4\\app\\Views\\enderecos\\index.php', 46)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\webserver\\www\\codeigniter4\\app\\Views\\enderecos\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('enderecos/index', [], true)
+ 5 APPPATH\Controllers\Enderecos.php(18): view('enderecos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Enderecos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Enderecos))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\webserver\\www\\codeigniter4\\public\\index.php')
+DEBUG - 2025-04-10 01:20:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-10 01:20:14 --> ErrorException: Undefined property: stdClass::$enderecos_id
+[Method: GET, Route: enderecos]
+in APPPATH\Views\enderecos\index.php on line 46.
+ 1 APPPATH\Views\enderecos\index.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$enderecos_id', 'C:\\xampp\\htdocs\\webserver\\www\\codeigniter4\\app\\Views\\enderecos\\index.php', 46)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\webserver\\www\\codeigniter4\\app\\Views\\enderecos\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('enderecos/index', [], true)
+ 5 APPPATH\Controllers\Enderecos.php(18): view('enderecos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Enderecos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Enderecos))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\webserver\\www\\codeigniter4\\public\\index.php')
