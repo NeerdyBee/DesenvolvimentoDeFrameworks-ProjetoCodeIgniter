@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class ImgProdutos extends Migration
+class Enderecos extends Migration
 {
     public function up(){
         $this->forge->addField([
@@ -34,12 +34,22 @@ class ImgProdutos extends Migration
                 'type'       => 'INT',
                 'constraint' => 1,
             ],
+            'enderecos_cidades_id' => [
+                'type'       => 'INT',
+                'constraint' => 11,
+                'unsigned'   => true,
+            ],
+            'enderecos_usuarios_id' => [
+                'type'       => 'INT',
+                'constraint' => 11,
+                'unsigned'   => true,
+            ],
             'created_at' => ['type' => 'DATETIME', 'null' => true],
             'updated_at' => ['type' => 'DATETIME', 'null' => true],
             'deleted_at' => ['type' => 'DATETIME', 'null' => true],
         ]);
 
-        $this->forge->addKey('produtos_id', true);
+        $this->forge->addKey('enderecos_id', true);
         $this->forge->addForeignKey(
             'enderecos_cidades_id ',
             'cidades',
@@ -55,11 +65,11 @@ class ImgProdutos extends Migration
             'RESTRICT'  // ON DELETE
         );
 
-        $this->forge->createTable('produtos');
+        $this->forge->createTable('enderecos');
     }
 
     public function down()
     {
-        $this->forge->dropTable('produtos');
+        $this->forge->dropTable('enderecos');
     }
 }
