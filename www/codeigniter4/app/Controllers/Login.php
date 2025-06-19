@@ -28,7 +28,7 @@ class Login extends BaseController
         $this->data['usuarios'] = $this->usuarios->where('usuarios_cpf',$login)->
         orWhere('usuarios_email',$login)->where('usuarios_senha',$senha)->find();
         if($this->data['usuarios'] == []){
-            $this->data['msg'] = msg('O usuário ou a senha são invalidos!','danger');
+            $this->data['msg'] = msg('Usuário ou senha invalidos!','danger');
             return view('login',$this->data);
 
         }else{
@@ -42,7 +42,8 @@ class Login extends BaseController
                     'usuarios_sobrenome' => $this->data['usuarios'][0]->usuarios_sobrenome,
                     'usuarios_cpf' => $this->data['usuarios'][0]->usuarios_cpf,
                     'usuarios_email' => $this->data['usuarios'][0]->usuarios_email,
-                    'logged_in' => TRUE
+                    'logged_in' => TRUE,
+                    'login_time' => time()
                 ];
                 $this->session->set('login', $infoSession);
 
@@ -51,7 +52,10 @@ class Login extends BaseController
                     return view('user/index',$this->data);
                 }
                 elseif($this->data['usuarios'][0]->usuarios_nivel == 1){
-                    return view('admin/index',$this->data);
+                    return view('home/admin',$this->data);
+                }
+                elseif($this->data['usuarios'][0]->usuarios_nivel == 2){
+                    return view('home/funcionarios',$this->data);
                 }else{
                     $this->data['msg'] = msg('Houve um problema com o seu acesso. Procure a Gerência de TI!','danger');
                     return view('login',$this->data);
@@ -65,12 +69,8 @@ class Login extends BaseController
 
     public function logout()
     {
-        // $this->session->remove('login');
         $this->data['msg'] = msg('Usuário desconectado','success');
-        // return redirect()->route('home');
-        // //return redirect()->to('home');
-        session()->destroy(); // Destrói todos os dados da sessão
-        //return redirect('/'); // Redireciona para a página inicial
+        session()->destroy(); 
         return view('home/index',$this->data);
     }
 

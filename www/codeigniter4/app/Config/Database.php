@@ -179,7 +179,7 @@ class Database extends Config
         'compress'    => false,
         'strictOn'    => false,
         'failover'    => [],
-        'port'        => 3306,
+        'port'        => 3309,
         'foreignKeys' => true,
         'busyTimeout' => 1000,
         'dateFormat'  => [

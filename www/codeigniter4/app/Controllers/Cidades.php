@@ -5,17 +5,14 @@ use App\Models\Cidades as Cidades_model;
 
 class Cidades extends BaseController
 {   
-    // variavel que recebe a instancia do model
     private $cidades; 
     
-    // metodo construtor
     public function __construct(){
-        $this->cidades = new Cidades_model(); // instancia do model
+        $this->cidades = new Cidades_model(); 
         $data['title'] = 'Cidades';
-        helper('functions'); // chama os metodos auxiliares
+        helper('functions'); 
     }
 
-    //
     public function index(): string
     {
         $data['title'] = 'Cidades';
@@ -39,16 +36,12 @@ class Cidades extends BaseController
     
     public function create()
     {
-
-        // Checks whether the submitted data passed the validation rules.
         if(!$this->validate([
             'cidades_nome' => 'required|max_length[255]|min_length[3]',
             'cidades_uf' => 'required|max_length[2]|min_length[2]'
         ])) {
             
-            // The validation fails, so returns the form.
             $data['cidades'] = (object) [
-                //'cidades_id' => $_REQUEST['cidades_id'],
                 'cidades_nome' => $_REQUEST['cidades_nome'],
                 'cidades_uf' => $_REQUEST['cidades_uf']
             ];

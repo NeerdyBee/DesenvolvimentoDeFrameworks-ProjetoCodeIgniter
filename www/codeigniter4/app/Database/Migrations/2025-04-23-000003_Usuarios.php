@@ -30,13 +30,13 @@ class Usuarios extends Migration
             ],
             'usuarios_cpf' => [
                 'type'       => 'CHAR',
-                'constraint' => 14, // com pontos e traço: 000.000.000-00
+                'constraint' => 14, 
                 'unique'     => true,
             ],
             'usuarios_nivel' => [
                 'type'       => 'TINYINT',
                 'constraint' => 1,
-                'default'    => 0, // Ex: 0 = comum, 1 = admin
+                'default'    => 0, 
             ],
             'usuarios_fone' => [
                 'type'       => 'VARCHAR',
@@ -45,14 +45,10 @@ class Usuarios extends Migration
             ],
             'usuarios_senha' => [
                 'type'       => 'VARCHAR',
-                'constraint' => 255, // para suportar hash bcrypt
+                'constraint' => 255, 
             ],
             'usuarios_data_nasc' => [
                 'type'       => 'DATE',
-            ],
-            'usuarios_data_cadastro' => [
-                'type'       => 'DATETIME',
-                'null'       => true,
             ],
             'created_at' => [
                 'type'       => 'DATETIME',

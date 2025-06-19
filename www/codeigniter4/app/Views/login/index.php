@@ -12,7 +12,6 @@
                     </div>
 
                     <form action="<?php echo base_url('login/logar') ?>" method="post">
-                        <!-- input login -->
                         <div class="mb-3">
                             <label for="login" class="form-label">
                                 <i class="bi bi-person"></i>
@@ -25,8 +24,6 @@
                                 seu email ou CPF.
                             </div>
                         </div>
-                        
-                        <!-- input senha -->
                         <div class="mb-3">
                             <label for="senha"class="form-label">
                                 <i class="bi bi-lock"></i>
@@ -35,15 +32,11 @@
 
                             <input type="password" placeholder="Informe a senha" name="senha" class="form-control"id="senha">
                         </div>
-
-                        <!-- inpup check -->
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input"
                                 id="checkme">
                             <label class="form-check-label" for="checkme">Manter-me Conectado</label>
                         </div>
-                        
-                        <!-- botão Logar -->
                         <p class="text-center">
                             <button type="submit" class="btn btn-lg btn-primary">
                                 Acessar 

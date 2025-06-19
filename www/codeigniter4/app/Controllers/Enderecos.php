@@ -50,7 +50,6 @@ class Enderecos extends BaseController
     public function create()
     {
 
-        // Checks whether the submitted data passed the validation rules.
         if(!$this->validate([
             'enderecos_rua' => 'required|max_length[255]|min_length[3]',
             'enderecos_numero' => 'required',
@@ -60,7 +59,6 @@ class Enderecos extends BaseController
             'enderecos_cidades_id' => 'required'
         ])) {
             
-            // The validation fails, so returns the form.
             $data['enderecos'] = (object) [
                 'enderecos_id' => '',
                 'enderecos_rua' => $_REQUEST['enderecos_rua'],
@@ -139,7 +137,6 @@ class Enderecos extends BaseController
 
     public function search()
     {
-        //$data['enderecos'] = $this->enderecos->like('enderecos_rua', $_REQUEST['pesquisar'])->find();
         $data['enderecos'] = $this->enderecos->like('enderecos_rua', $_REQUEST['pesquisar'])->orlike('enderecos_numero', $_REQUEST['pesquisar'])->find();
         $total = count($data['enderecos']);
         $data['msg'] = msg("Dados Encontrados: {$total}",'success');

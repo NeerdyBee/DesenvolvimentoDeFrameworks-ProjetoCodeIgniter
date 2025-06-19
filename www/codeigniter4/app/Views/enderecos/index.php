@@ -39,8 +39,6 @@
                 </tr>
             </thead>
             <tbody class="table-group-divider">
-                
-                <!-- Aqui vai o laço de repetição -->
                 <?php for($i=0; $i < count($enderecos); $i++){ 
                     if ($enderecos[$i]->enderecos_usuarios_id == $login->usuarios_id) {
                     ?>

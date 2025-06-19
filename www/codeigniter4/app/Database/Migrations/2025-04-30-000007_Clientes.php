@@ -30,13 +30,7 @@ class Clientes extends Migration
         ]);
 
         $this->forge->addKey('clientes_id', true);
-        $this->forge->addForeignKey(
-            'clientes_usuarios_id ',
-            'usuarios',
-            'usuarios_id',
-            'CASCADE',  // ON UPDATE
-            'RESTRICT'  // ON DELETE
-        );
+        $this->forge->addForeignKey('clientes_usuarios_id', 'usuarios', 'usuarios_id', 'CASCADE', 'CASCADE');
 
         $this->forge->createTable('clientes');
     }

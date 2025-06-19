@@ -19,6 +19,10 @@ class Funcionarios extends Migration
                 'constraint' => '10,2',
                 'default'    => 0.00,
             ],
+            'funcionarios_cargo' => [
+                'type'       => 'VARCHAR',
+                'constraint' => 100,
+            ],
             'funcionarios_usuarios_id' => [
                 'type'       => 'INT',
                 'constraint' => 11,
@@ -31,7 +35,7 @@ class Funcionarios extends Migration
 
         $this->forge->addKey('funcionarios_id', true);
         $this->forge->addForeignKey(
-            'funcionarios_usuarios_id ',
+            'funcionarios_usuarios_id',
             'usuarios',
             'usuarios_id',
             'CASCADE',  // ON UPDATE

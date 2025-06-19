@@ -1,13 +1,17 @@
 <?php
-    helper('functions');
-    session();
-    if(isset($_SESSION['login'])){
-        $login = $_SESSION['login'];
-        print_r($login);
-        if($login->usuarios_nivel == 1){
-    
-?>
-<?= $this->extend('Templates_admin') ?>
+helper('functions');
+session();
+
+if (isset($_SESSION['login'])) {
+    $login = $_SESSION['login'];
+    if ($login->usuarios_nivel >= 1) {
+        if ($login->usuarios_nivel == 1) {
+            echo $this->extend('Templates_admin');
+        } else {
+            echo $this->extend('Templates_funcionario');
+        }
+        ?>
+
 <?= $this->section('content') ?>
 
     <div class="container  ">
@@ -39,8 +43,6 @@
                 </tr>
             </thead>
             <tbody class="table-group-divider">
-                
-                <!-- Aqui vai o laço de repetição -->
                 <?php for($i=0; $i < count($imgprodutos); $i++){ ?>
                     <tr>
                         <th scope="row"><?= $imgprodutos[$i]->imgprodutos_id; ?></th>

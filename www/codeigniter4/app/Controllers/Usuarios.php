@@ -38,18 +38,16 @@ class Usuarios extends BaseController
     public function create()
     {
 
-        // Checks whether the submitted data passed the validation rules.
         if(!$this->validate([
             'usuarios_nome' => 'required|max_length[255]|min_length[3]',
             'usuarios_sobrenome' => 'required',
             'usuarios_cpf' => 'required',
-            'usuarios_email' => 'required',
-            'usuarios_senha' => 'required',
+            'usuarios_email' => 'required|valid_email',
+            'usuarios_senha' => 'required|min_length[6]',
+            'usuarios_confirmar_senha' => 'required|matches[usuarios_senha]',
             'usuarios_fone' => 'required',
             'usuarios_data_nasc' => 'required',
         ])) {
-            
-            // The validation fails, so returns the form.
             $data['usuarios'] = (object) [
                 'usuarios_id' => '',
                 'usuarios_nome' => $_REQUEST['usuarios_nome'],
@@ -148,14 +146,12 @@ class Usuarios extends BaseController
 
     public function salvar_senha():string {
 
-        // Checks whether the submitted data passed the validation rules.
         if(!$this->validate([
             'usuarios_senha_atual' => 'required',
             'usuarios_nova_senha' => 'required|max_length[14]|min_length[6]',
             'usuarios_confirmar_senha' => 'required|max_length[14]|min_length[6]'
         ])) {
             
-            // The validation fails, so returns the form.
             $data['usuarios'] = (object) [
                 'usuarios_senha_atual' => $_REQUEST['usuarios_senha_atual'],
                 'usuarios_nova_senha' => $_REQUEST['usuarios_nova_senha'],

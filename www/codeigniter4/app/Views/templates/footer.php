@@ -1,4 +1,3 @@
-<!-- Abre footer -->
 <div class="clearfix"></div>
             <footer class="bg-dark text-center text-white">
                 <!-- Grid container -->

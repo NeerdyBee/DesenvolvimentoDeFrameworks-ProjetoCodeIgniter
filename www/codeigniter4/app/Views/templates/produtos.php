@@ -1,4 +1,3 @@
-<!--Abre Produtos-->
 <div id="produtos" class="container">
 
 <h1>Produtos</h1>
@@ -10,7 +9,6 @@ $produtos = ['hamburguer1.png','hamburguer2.png','hamburguer3.png','hamburguer4.
 for($i=0; $i < count($produtos);$i++){
 
 ?>
-    <!-- card 1 -->
     <div class="col-sm-3 mb-3 pb-4 mb-sm-0">
         <div class="card">
             <img src="assets/images/<?= $produtos[$i] ?>"
@@ -31,5 +29,3 @@ for($i=0; $i < count($produtos);$i++){
 </div>
 
 </div>
-
-<!--Fecha Produtos-->

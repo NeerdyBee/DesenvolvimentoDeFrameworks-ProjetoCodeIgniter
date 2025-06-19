@@ -113,11 +113,9 @@ class Imgprodutos extends BaseController
 
     public function delete($id)
     {
-        // carrega o link da imagem a ser deletada
         $data['clear_img'] = $this->imgprodutos->find(['imgprodutos_id' => (int) $id])[0];
         $this->imgprodutos->where('imgprodutos_id', (int) $id)->delete();
         
-        // deletar a imagem da pasta upload
         unlink('assets/'.$data['clear_img']->imgprodutos->produtos_link);
         
         $data['msg'] = msg('Deletado com Sucesso!','success');

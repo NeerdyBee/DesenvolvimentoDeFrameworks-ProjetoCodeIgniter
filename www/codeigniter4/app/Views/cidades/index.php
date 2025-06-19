@@ -39,8 +39,6 @@
                 </tr>
             </thead>
             <tbody class="table-group-divider">
-                
-                <!-- Aqui vai o laço de repetição -->
                 <?php for($i=0; $i < count($cidades); $i++){ ?>
                     <tr>
                         <th scope="row"><?= $cidades[$i]->cidades_id; ?></th>

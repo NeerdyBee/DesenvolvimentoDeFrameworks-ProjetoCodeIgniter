@@ -1,9 +1,8 @@
-<!-- Abre o menu de navegação -->
 <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary"
             data-bs-theme="dark">
             <div class="container-fluid">
             <a class="navbar-brand" href="<?php echo base_url('/') ?>">
-            <!--Logo do Projeto-->
+
             <img src="<?php echo base_url('assets/images/sd_logo.png') ?>" alt="SysDelivery" width="180">
         </a>
                 <button class="navbar-toggler" type="button"
@@ -17,7 +16,6 @@
                     id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                        <!-- Link Home-->
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page"
                                 href="#">
@@ -26,7 +24,6 @@
                             </a>
                         </li>
 
-                        <!-- Link Produtos-->
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page"
                                 href="#produtos">
@@ -35,7 +32,6 @@
                             </a>
                         </li>
 
-                        <!-- Link Produtos-->
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page"
                                 href="#sobre">
@@ -44,7 +40,6 @@
                             </a>
                         </li>
 
-                        <!-- Link Produtos-->
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page"
                                 href="#contato">
@@ -64,4 +59,3 @@
                 </div>
             </div>
         </nav>
-        <!-- Fecha o menu de navegação -->

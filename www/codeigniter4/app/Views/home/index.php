@@ -1,8 +1,6 @@
 <?php session() ?>
 <?= $this->extend('Templates') ?>
 <?= $this->section('content') ?>
-
-<!--Abre Produtos-->
 <div id="produtos" class="container  ">
 
 <h1 class="col mt-3">Produtos</h1>
@@ -24,7 +22,6 @@ $produtos = ['hamburguer1.png','hamburguer2.png','hamburguer3.png','hamburguer4.
 for($i=0; $i < count($produtos);$i++){
 
 ?>
-    <!-- card 1 -->
     <div class="col-sm-3 mb-3 pb-4 mb-sm-0">
         <div class="card">
             <img src="<?= base_url('assets/images/'.$produtos[$i]) ?>" class="card-img-top">
@@ -45,7 +42,5 @@ for($i=0; $i < count($produtos);$i++){
 </div>
 
 </div>
-
-<!--Fecha Produtos-->
 
 <?= $this->endSection('content') ?>

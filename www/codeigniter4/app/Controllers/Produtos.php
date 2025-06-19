@@ -18,7 +18,6 @@ class Produtos extends BaseController
     {
         $data['title'] = 'Produtos';
         $data['produtos'] = $this->produtos->join('categorias', 'produtos_categorias_id = categorias_id')->find();
-        //$data['produtos'] = $this->produtos->findAll();
         return view('produtos/index',$data);
     }
 
@@ -41,16 +40,13 @@ class Produtos extends BaseController
     public function create()
     {
 
-        // Checks whether the submitted data passed the validation rules.
         if(!$this->validate([
             'produtos_nome' => 'required|max_length[255]|min_length[3]',
             'produtos_preco_custo' => 'required',
             'produtos_preco_venda' => 'required'
         ])) {
             
-            // The validation fails, so returns the form.
             $data['produtos'] = (object) [
-                //'produtos_id' => $_REQUEST['produtos_id'],
                 'produtos_nome' => $_REQUEST['produtos_nome'],
                 'produtos_descricao' => $_REQUEST['produtos_descricao'],
                 'produtos_preco_custo' => moedaDolar($_REQUEST['produtos_preco_custo']),
@@ -119,7 +115,6 @@ class Produtos extends BaseController
 
     public function search()
     {
-        //$data['produtos'] = $this->produtos->like('produtos_nome', $_REQUEST['pesquisar'])->find();
         $data['produtos'] = $this->produtos->join('categorias', 'produtos_categorias_id = categorias_id')->like('produtos_nome', $_REQUEST['pesquisar'])->orlike('categorias_nome', $_REQUEST['pesquisar'])->find();
         $total = count($data['produtos']);
         $data['msg'] = msg("Dados Encontrados: {$total}",'success');

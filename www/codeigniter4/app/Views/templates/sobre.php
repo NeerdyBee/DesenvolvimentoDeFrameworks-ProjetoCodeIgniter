@@ -1,4 +1,3 @@
-<!-- Abre Sobre -->
 <div id="sobre" class="container-fluid bg-light mt-5 mb-5 pt-3 pb-3">
             <div class="container">
 

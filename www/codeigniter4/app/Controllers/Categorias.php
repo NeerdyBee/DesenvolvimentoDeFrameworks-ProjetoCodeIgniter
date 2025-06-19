@@ -5,17 +5,14 @@ use App\Models\Categorias as Categorias_model;
 
 class Categorias extends BaseController
 {   
-    // variavel que recebe a instancia do model
     private $categorias; 
     
-    // metodo construtor
     public function __construct(){
-        $this->categorias = new Categorias_model(); // instancia do model
+        $this->categorias = new Categorias_model(); 
         $data['title'] = 'Categorias';
-        helper('functions'); // chama os metodos auxiliares
+        helper('functions');
     }
 
-    //
     public function index(): string
     {
         $data['title'] = 'Categorias';
@@ -38,15 +35,11 @@ class Categorias extends BaseController
     
     public function create()
     {
-
-        // Checks whether the submitted data passed the validation rules.
         if(!$this->validate([
             'categorias_nome' => 'required|max_length[255]|min_length[3]',
         ])) {
             
-            // The validation fails, so returns the form.
             $data['categorias'] = (object) [
-                //'categorias_id' => $_REQUEST['categorias_id'],
                 'categorias_nome' => $_REQUEST['categorias_nome'],
             ];
             
